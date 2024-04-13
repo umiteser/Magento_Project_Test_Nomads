@@ -2,15 +2,12 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 
@@ -62,9 +59,8 @@ public class ParentPage {
     }
 
    public void hoverFunction(WebElement element) {
-       Actions actions = new Actions(GWD.getDriver());
- //     Action action = actions.moveToElement(element).build();
- //     action.perform();
+        wait.until(ExpectedConditions.visibilityOf(element));
+       new Actions(GWD.getDriver()).moveToElement(element).build().perform();
 
     }
 }
