@@ -34,7 +34,7 @@ public class ParentPage {
 
     public void verifyContainsText(WebElement element, String value) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
-        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"The message does not contain the expected value!");
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()), "The message does not contain the expected value!");
     }
 
     public static void WaitNano(long sec) {
@@ -58,9 +58,9 @@ public class ParentPage {
         return (int) (Math.random() * (max - min));
     }
 
-   public void hoverFunction(WebElement element) {
+    public void hoverFunction(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
-       new Actions(GWD.getDriver()).moveToElement(element).build().perform();
+        new Actions(GWD.getDriver()).moveToElement(element).build().perform();
 
     }
 }
