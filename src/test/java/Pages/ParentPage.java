@@ -48,7 +48,7 @@ public class ParentPage {
     public static boolean ListContainsString(List<WebElement> list, String string) {
         boolean condition = false;
         for (WebElement e : list) {
-            if (e.getText().equalsIgnoreCase(string))
+            if (e.getText().contains(string))
                 condition = true;
         }
         return condition;
@@ -62,5 +62,10 @@ public class ParentPage {
         wait.until(ExpectedConditions.visibilityOf(element));
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
 
+    }
+
+    public void myClickNoScroll(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
     }
 }
