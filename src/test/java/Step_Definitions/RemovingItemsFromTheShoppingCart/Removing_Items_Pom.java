@@ -53,7 +53,6 @@ public class Removing_Items_Pom {
                 return this.OK;
             case "DMSG":
                 return this.DMSG;
-
         }
         return null;
     }
