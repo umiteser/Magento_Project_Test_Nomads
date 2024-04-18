@@ -27,5 +27,6 @@ public class Removing_Items_Steps extends ParentPage {
         myClick(rip.Delete);
         myClick(rip.OK);
         Assert.assertFalse(rip.DMSG.getText().contains("You have items"));
+
     }
 }
