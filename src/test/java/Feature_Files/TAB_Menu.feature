@@ -1,7 +1,7 @@
 Feature: TAB Menu
 
   Scenario: TAB Menu Control
-    Given Navigate to Magento website
+    Given Navigate to the Magento website
     When Click on the element in panel header
       | singIn |
 
