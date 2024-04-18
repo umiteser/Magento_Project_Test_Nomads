@@ -36,4 +36,7 @@ public class Search_Pom extends ParentPage {
 
     @FindBy(css = "ul[class='items'] li")
     public List<WebElement> categoryLink;
+
+    @FindBy(css = "[class='message notice'] div")
+    public WebElement errorMessage;
 }

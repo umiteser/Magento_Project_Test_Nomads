@@ -49,6 +49,7 @@ public class Search_Steps extends ParentPage {
 
     @And("Send SKU number to the product search box")
     public void sendSKUNumberToTheProductSearchBox() {
+        wait.until(ExpectedConditions.visibilityOf(sp.searchBox));
         rdmIndex = RandomGenerator(productSKUNumber.size(), 0);
         sp.mySendKeys(sp.searchBox, productSKUNumber.get(rdmIndex));
         sp.myClick(sp.searchButton);
@@ -75,6 +76,19 @@ public class Search_Steps extends ParentPage {
     @And("Confirm the SKU number on the product page")
     public void confirmTheSKUNumberOnTheProductPage() {
         Assert.assertEquals(productSKUNumber.get(rdmIndex), sp.skuNumber.getText(), "The SKU number on the product page does not match the SKU number of the searched product.");
+    }
+
+    @And("Send invalid SKU number to product search box")
+    public void sendInvalidSKUNumberToProductSearchBox() {
+        wait.until(ExpectedConditions.visibilityOf(sp.searchBox));
+        sp.mySendKeys(sp.searchBox, "ABC");
+        sp.myClick(sp.searchButton);
+    }
+
+    @Then("Display error message")
+    public void displayErrorMessage() {
+        wait.until(ExpectedConditions.visibilityOf(sp.errorMessage));
+        Assert.assertTrue(sp.errorMessage.getText().contains("Your search returned no results."), "Error message could not be displayed.");
     }
 
     private void tabMenuDisplay(int i) {
