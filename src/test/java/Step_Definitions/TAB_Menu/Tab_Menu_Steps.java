@@ -17,8 +17,8 @@ public class Tab_Menu_Steps extends ParentPage {
     Tab_Menu_Pom tmp = new Tab_Menu_Pom();
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
-    @Given("Navigate to Magento website")
-    public void navigateToMagentoWebsite() {
+    @Given("Navigate to the Magento website")
+    public void navigateToTheMagentoWebsite() {
         GWD.getDriver().get("https://magento.softwaretestingboard.com/");
     }
 
