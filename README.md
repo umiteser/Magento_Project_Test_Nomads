@@ -1,5 +1,5 @@
 # Magento Project
-
+ 
     Magento is one of the most popular e-commerce platforms in the world. Both free and there are paid versions. "Magento Open Source", completely free and open source
 is a platform. It can be used for e-commerce sites of all sizes. Basic e-commerce functions and offers many customisation options. "Magento Commerce" is a paid platform. It offers more features and functions. It is ideal for corporate e-commerce sites.Magento, which stands out for being open source and free, can be used from a small store can be used to build e-commerce sites of any scale, up to a large marketplace. Product management, catalogue management, payment and delivery, order management, customer management, marketing and has many features such as SEO. For more information, please contact https://www.hosting.com.tr/blog/magento/ you can have a look.
 
